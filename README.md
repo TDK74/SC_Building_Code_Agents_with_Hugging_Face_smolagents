@@ -3,7 +3,7 @@
 ### Acknowledgments
 The Python code is from the short course "Building Code Agents with Hugging Face smolagents" on the DeepLearning.AI platform, available for free.  
 For more details, visit:  
-<>
+<https://www.deeplearning.ai/short-courses/building-code-agents-with-hugging-face-smolagents/>
 
 ### Description
 This repository contains only Python code from my practice after each lesson.  

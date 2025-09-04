@@ -15,7 +15,6 @@ from smolagents import tool
 from typing import Dict
 
 
-
 tracer_provider = register(
                         project_name = PROJECT_NAME,
                         #endpoint = get_phoenix_endpoint() + "v1/traces"
@@ -115,6 +114,7 @@ for request in client_requests:
 ## ------------------------------------------------------##
 spans = px.Client().get_spans_dataframe(project_name = PROJECT_NAME)
 spans.head(20)
+
 ## ------------------------------------------------------##
 agents = spans[spans['span_kind'] == 'AGENT'].copy()
 agents['task'] = agents['attributes.input.value'].apply(
@@ -160,3 +160,4 @@ for request, expected_tool in client_requests:
                 )
 
 pd.DataFrame(results)
+
